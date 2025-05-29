@@ -6,5 +6,4 @@ public class SalesRepresentative
     public string ? Address { get; set; }
     public string ? Position { get; set; }
     public DateTime DateOfJoining { get; set; }
-    public ICollection<SalesRecord> ? SalesRecords { get; set; }
 }

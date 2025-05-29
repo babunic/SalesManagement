@@ -35,3 +35,15 @@ artifacts/
 
 # VS Code
 vscode/
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Entity Framework Migrations folder
+Migrations/
+
+# Optional: VS & ASP.NET build artifacts
+bin/
+obj/

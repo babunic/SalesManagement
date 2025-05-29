@@ -73,17 +73,12 @@ namespace SalesManagementAPI.Migrations
             modelBuilder.Entity("SalesRecord", b =>
                 {
                     b.HasOne("SalesRepresentative", "Representative")
-                        .WithMany("SalesRecords")
+                        .WithMany()
                         .HasForeignKey("RepresentativeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Representative");
-                });
-
-            modelBuilder.Entity("SalesRepresentative", b =>
-                {
-                    b.Navigation("SalesRecords");
                 });
 #pragma warning restore 612, 618
         }

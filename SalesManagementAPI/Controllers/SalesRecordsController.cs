@@ -12,10 +12,33 @@ public class SalesRecordsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<SalesRecord>>> GetSalesRecords()
+    public async Task<ActionResult<IEnumerable<SalesRecord>>> GetSalesRecords([FromQuery] int? repId, [FromQuery] string? search, [FromQuery] DateTime? startDate, [FromQuery] DateTime? endDate)
     {
-        var salesRecords = await _service.GetAllSalesRecordsAsync();
-        return Ok(salesRecords);
+        try
+        {
+            var salesRecords = await _service.GetAllSalesRecordsAsync(repId, search, startDate, endDate);
+            return Ok(salesRecords);
+        }
+        catch (Exception ex)
+        {
+            // Log error (with Serilog or ILogger if you have it)
+            return StatusCode(500, $"An error occurred while fetching sales records: {ex.Message}");
+        }
+    }
+
+    [HttpGet("representatives")]
+    public async Task<ActionResult<IEnumerable<SalesRepresentative>>> GetRepresentatives()
+    {
+        try
+        {
+            var reps = await _service.GetAllSalesRepresentativesAsync();
+            return Ok(reps);
+        }
+        catch (Exception ex)
+        {
+            // Log error (with Serilog or ILogger if you have it)
+            return StatusCode(500, $"Error fetching representatives: {ex.Message}");
+        }
     }
 
     [HttpGet("{id}")]

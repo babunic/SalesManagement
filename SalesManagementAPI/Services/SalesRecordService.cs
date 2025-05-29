@@ -7,9 +7,14 @@ public class SalesRecordService
         _repository = repository;
     }
 
-    public async Task<IEnumerable<SalesRecord>> GetAllSalesRecordsAsync()
+    public async Task<IEnumerable<SalesRecord>> GetAllSalesRecordsAsync(int? repId, string? search, DateTime? startDate, DateTime? endDate)
     {
-        return await _repository.GetAllAsync();
+        return await _repository.GetAllAsync(repId,search,startDate,endDate);
+    }
+
+    public async Task<IEnumerable<SalesRepresentative>> GetAllSalesRepresentativesAsync()
+    {
+        return await _repository.GetAllSalesRepresentativesAsync();
     }
 
     public async Task<SalesRecord> GetSalesRecordByIdAsync(int id)
