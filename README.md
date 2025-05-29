@@ -24,7 +24,7 @@ This application allows users to:
 
 ## 📋 Prerequisites
 
-### 🔧 Backend: ASP.NET Core 9 Web API
+### 🔧 Backend: ASP.NET Core Web API
 
 - [.NET SDK 9.0+](https://dotnet.microsoft.com/en-us/download)
 - CORS enabled for `http://localhost:4200`
@@ -54,7 +54,7 @@ This application allows users to:
   
 ## ⚙️ Setup Instructions
 
-### 📌 Backend (ASP.NET Core 8 API)
+### 📌 Backend (ASP.NET Core API)
 
 1. **Navigate to your backend project folder**
 
@@ -110,7 +110,7 @@ This application allows users to:
 
 ## 📦 Project Structure
 
-### 📁 Backend (ASP.NET Core 8)
+### 📁 Backend (ASP.NET Core)
 
 ```
 SalesManagementAPI/
