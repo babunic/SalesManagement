@@ -31,7 +31,7 @@ TestResult.xml
 project.lock.json
 project.fragment.lock.json
 artifacts/
-**/Properties/launchSettings.json
+# **/Properties/launchSettings.json
 
 # VS Code
 vscode/
