@@ -30,10 +30,12 @@ This application allows users to:
 - CORS enabled for `http://localhost:4200`
 - Swagger/OpenAPI configured for testing and contract validation
 
-**Run Command On Your CLI**
- `0. dotnet tool install --global dotnet-ef --version 9.*`
- `1. dotnet-ef migrations add InitialCreate`
- `2. dotnet-ef database update`
+**Run Command On Your CLI to configure dotnet entitiframework and SQLite database**
+
+  ```bash 
+    dotnet tool install --global dotnet-ef --version 9.*
+    dotnet-ef migrations add InitialCreate
+    dotnet-ef database update
 
 **Endpoints:**
 - `GET /api/SalesRecords`
